@@ -32,16 +32,20 @@ class Clean:
         self.df = df
     
     # check for missing values percentage
-    def missing_values(self):
+    def missing_duplicated(self):
     # identify the total missing values per column
     # sort in order 
         miss = self.df.isnull().sum().sort_values(ascending = False)
 
         # calculate percentage of the missing values
-        percentage_miss = (self.df.isnull().sum() / len(self.df)).sort_values(ascending = False)
+        percentage_miss = (self.df.isnull().sum() / len(self.df) * 100).sort_values(ascending = False)
 
         # store in a dataframe 
         missing = pd.DataFrame({"Missing Values": miss, "Percentage(%)": percentage_miss})
+    
+        print("\n Duplicated Rows:\n")
+        duplicate_count = self.df.duplicated().sum()
+        print(f"- Total duplicated rows: {duplicate_count} \n \n")
 
         return missing
 
