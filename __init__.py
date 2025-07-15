@@ -57,6 +57,3 @@ class Clean:
         duplicates = f'The dataset now has {self.df.duplicated().sum()} duplicate rows'
 
         return duplicates
-        
-        
-    
