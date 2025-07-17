@@ -29,7 +29,7 @@ Key columns in the dataset include:
 
 ## Data Analysis
 
-![Stacked bar chat](Images/output3.png)
+![Stacked bar chat](images/output3.png)
 
 Observations
 - Apple and Google Receive Mostly Positive Sentiment
@@ -37,11 +37,11 @@ Observations
 - When no specific brand is mentioned, tweets are mostly neutral, with very little emotion expressed.
 - Very Few Positive Tweets in the none category.
 
-![Confusion matrix](Images/output22.png)
+![Confusion matrix](images/output22.png)
 
 The model performs very well on class 1 (positive/majority class) with high true positives and low false negatives. However, it struggles with class 0 (negative/minority class), misclassifying nearly 68% of them. This indicates class imbalance We'll try fitting a decision tree while accounting for the class imbalance to see if there will be better performance.
 
-![Model perfomance comparisson](Images/output.png)
+![Model perfomance comparisson](images/output.png)
 
 Logistic regression and the tuned tree are our best binary classification models because they do not over fit.
 
