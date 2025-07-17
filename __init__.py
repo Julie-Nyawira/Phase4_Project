@@ -27,9 +27,7 @@ class Explore:
 
 
 # data cleaning
-class Clean:
-    def __init__(self, df):
-        self.df = df
+class Clean(Explore):
     
     # check for missing values percentage
     def missing_duplicated(self):
